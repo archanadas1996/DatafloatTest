@@ -1,0 +1,33 @@
+
+
+<h2>User List</h2>
+<div style="display: flex;">
+<input type="text" name="fisrt" [(ngModel)]="first" (input)="filteruser()" >
+<select [(ngModel)]="pageNumber" (change)="changebyPageNumber()" style="
+margin-left: 30px;
+width: 87px;">
+    <option value=10 selected>10</option>
+    <option value=20>20</option>
+    <option value=30>30</option>
+
+</select>
+</div>
+<div  style="float: right;">
+<button class="btn-primary btn-user" routerLink="/add-user">Add User</button>
+</div>
+<table >
+  <tr>
+    <th>Name</th>
+    <th>email</th>
+    <th>username</th>
+    <th>phone number</th>
+    <th>DOB</th>
+  </tr>
+  <tr *ngFor="let item of userList">
+    <td>{{item.user.name.first}} &nbsp;{{item.user.name.last}} </td>
+    <td>{{item.user.email}}</td>
+    <td>{{item.user.username}}</td>
+    <td>{{item.user.phone}}</td>
+    <td>{{item.user.dob}}</td>
+  </tr>
+</table>

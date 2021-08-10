@@ -1,0 +1,23 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .btn-user{
+    width: 89px;
+    background-color: cornflowerblue;
+    color: white;
+    border: navajowhite;
+    height: 34px;
+    margin-bottom: 10px;
+  }

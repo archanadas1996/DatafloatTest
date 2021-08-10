@@ -1,0 +1,44 @@
+<div class="login">
+    <div class="login-triangle"></div>
+  
+    <h2 class="login-header">Add User</h2>
+  
+      <form class="form-signin login-container" [formGroup]="userForm" (ngSubmit)="submitUser()">
+        <input name="title" class=" form-control sign-up-box  inp-backcolor" formControlName="title" placeholder="title" type="text" [ngClass]="{ 'is-invalid': submitted && f2.title.errors }" >
+        <div *ngIf="submitted && f2.title.errors" class="invalid-feedback">
+          <div *ngIf="f2.title.errors.required" style="color: red;">This field is required</div>
+
+          </div>
+          <br>
+          <input name="first" class=" form-control sign-up-box  inp-backcolor" formControlName="first" placeholder="first" type="text" [ngClass]="{ 'is-invalid': submitted && f2.first.errors }" >
+          <div *ngIf="submitted && f2.first.errors" class="invalid-feedback">
+            <div *ngIf="f2.first.errors.required" style="color: red;">This field is required</div>
+            </div>
+            <input name="first" class=" form-control sign-up-box  inp-backcolor" formControlName="last" placeholder="first" type="text" [ngClass]="{ 'is-invalid': submitted && f2.last.errors }" >
+            <div *ngIf="submitted && f2.last.errors" class="invalid-feedback">
+              <div *ngIf="f2.last.errors.required" style="color: red;">This field is required</div>
+              </div>
+              <input name="email" class=" form-control sign-up-box  inp-backcolor" formControlName="email" placeholder="email" type="text" [ngClass]="{ 'is-invalid': submitted && f2.email.errors }" >
+              <div *ngIf="submitted && f2.email.errors" class="invalid-feedback">
+                <div *ngIf="f2.email.errors.required" style="color: red;">This field is required</div>
+                </div>
+                <input name="username" class=" form-control sign-up-box  inp-backcolor" formControlName="username" placeholder="username" type="text" [ngClass]="{ 'is-invalid': submitted && f2.username.errors }" >
+                <div *ngIf="submitted && f2.username.errors" class="invalid-feedback">
+                  <div *ngIf="f2.username.errors.required" style="color: red;">This field is required</div>
+                  </div>
+                  <input id="male" type="radio" value="male" name="gender" formControlName="gender">
+                  <label for="male">Male</label>
+                  <input id="female" type="radio" value="female" name="gender" formControlName="gender">
+                  <label for="female">Female</label>
+                  <input name="username" class=" form-control sign-up-box  inp-backcolor" formControlName="dob" placeholder="dob" type="date" [ngClass]="{ 'is-invalid': submitted && f2.dob.errors }" >
+                  <div *ngIf="submitted && f2.dob.errors" class="invalid-feedback">
+                    <div *ngIf="f2.dob.errors.required" style="color: red;">This field is required</div>
+                    </div>
+                    <input name="phone" class=" form-control sign-up-box  inp-backcolor" formControlName="phone" placeholder="phone" type="text" [ngClass]="{ 'is-invalid': submitted && f2.phone.errors }" >
+                    <div *ngIf="submitted && f2.phone.errors" class="invalid-feedback">
+                      <div *ngIf="f2.phone.errors.required" style="color: red;">This field is required</div>
+                      </div>
+      <p><input type="submit" value="Register"></p>
+    </form>
+  </div>
+  
