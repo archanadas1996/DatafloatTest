@@ -14,19 +14,24 @@ export class HomeComponent implements OnInit {
   userdata:any[] = [];
 
   constructor(private service:ApiService) { 
-    var list = localStorage.getItem('user');
-    this.currentUser = JSON.parse(localStorage.getItem('user') || '{}');
-    this.currentUser.forEach((element:any) => {
-      console.log(element)
-      this.userList.push(element);
-      console.log(this.userList)
-      this.userdata.push(element)
-    });
+    
   
   }
 
   ngOnInit(): void {
+    var list = localStorage.getItem('user');
+    this.currentUser = JSON.parse(localStorage.getItem('user') || 'null');
+    
+    if(this.currentUser != null){
+      this.currentUser.forEach((element:any) => {
+        console.log(element)
+        this.userList.push(element);
+        console.log(this.userList)
+        this.userdata.push(element)
+      });
+    }
     this.getUsers();
+    
   }
   filteruser(){
   console.log(this.first)
